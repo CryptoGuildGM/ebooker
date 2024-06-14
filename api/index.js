@@ -30,12 +30,12 @@ app.use(cors());
 app.use(cookieParser());
 app.use(express.json());
 
-app.use('/api/auth', authRoute);
-app.use('/api/users', usersRoute);
-app.use('/api/hotels', hotelsRoute);
-app.use('/api/rooms', roomsRoute);
+app.use('/auth', authRoute);
+app.use('/users', usersRoute);
+app.use('/hotels', hotelsRoute);
+app.use('/rooms', roomsRoute);
 
-app.listen(8080, () => {
+app.listen(8080, 'localhost', () => {
   connect();
-  console.log('Connected to backend.');
+  console.log('Server listening on 8080.');
 });
