@@ -35,7 +35,7 @@ app.use('/users', usersRoute);
 app.use('/hotels', hotelsRoute);
 app.use('/rooms', roomsRoute);
 
-app.listen(8080, 'localhost', () => {
+app.listen(process.env.PORT, () => {
   connect();
   console.log('Server listening on 8080.');
 });
